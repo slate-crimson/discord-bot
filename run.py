@@ -1,4 +1,8 @@
-from app import start_app
+import app
+import os
+import dotenv
 
 if __name__ == "__main__":
-    start_app(dev=True)
+    dotenv.load_dotenv()
+    token = os.environ['DISCORD_ACCESS_TOKEN']
+    app.start(token=token, dev=True)
