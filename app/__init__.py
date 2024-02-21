@@ -1,6 +1,6 @@
 import os
 import dotenv
-import bot
+from .bot import *
 
 __author__ = "Blake Nall"
 
@@ -9,5 +9,5 @@ token = os.environ['DISCORD_ACCESS_TOKEN']
 
 def start_app(dev: bool):
     if dev:
-        bot.start(token=token)
+        start(token=token)
     return True
